@@ -3,7 +3,7 @@ import { Flex, Link, Menu, MenuButton, Text, Icon } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaArrowDown, FaArrowUp, FaSquare } from "react-icons/fa";
 
-const NavItem = ({ sidebarWidth, title, icon }) => {
+const SidebarNavItem = ({ sidebarWidth, title, icon }) => {
   // state to hide and display the text on clicking the navItems
   const [showOptions, setShowOptions] = useState(false);
 
@@ -88,4 +88,4 @@ const NavItem = ({ sidebarWidth, title, icon }) => {
   );
 };
 
-export default NavItem;
+export default SidebarNavItem;

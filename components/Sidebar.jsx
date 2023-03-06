@@ -1,12 +1,12 @@
 import { Flex, Divider, Avatar, Heading, Text, IconButton, Button } from "@chakra-ui/react"
 import { useState } from "react"
 import { FaBars, FaCalendar, FaFolder, FaTags, FaTasks, FaWallet } from "react-icons/fa"
-import NavItem from "./NavItem"
+import SidebarNavItem from "./SidebarNavItem"
 
 const Sidebar = () => {
 
   // state to change the sidebar width on click
-  const [sidebarWidth, setSidebarWidth] = useState(false) // by default sidebar is collapsed
+  const [sidebarWidth, setSidebarWidth] = useState(true) // by default sidebar is collapsed
 
 
   return (
@@ -16,7 +16,8 @@ const Sidebar = () => {
       left="0"
       minHeight="100vh"
       p={2}
-      boxShadow="4px 4px 12px 0 rgba(0, 0, 0, 0.05)"
+      // boxShadow="4px 4px 12px 0 rgba(0, 0, 0, 0.05)"
+      borderRight = "0.5px solid rgba(0, 0, 0, 0.08)"
       w={sidebarWidth ? "210px" : "115px"}
       transition="all 0.05s ease-out"
       flexDir="column"
@@ -64,11 +65,11 @@ const Sidebar = () => {
       </Button>
 
       {/* navItems */}
-      <NavItem sidebarWidth={sidebarWidth} title="Plan" icon={FaCalendar} />
-      <NavItem sidebarWidth={sidebarWidth} title="Task" icon={FaTasks} />
-      <NavItem sidebarWidth={sidebarWidth} title="Projects" icon={FaFolder} />
-      <NavItem sidebarWidth={sidebarWidth} title="Tags" icon={FaTags} />
-      <NavItem sidebarWidth={sidebarWidth} title="Free Plan" icon={FaWallet} />
+      <SidebarNavItem sidebarWidth={sidebarWidth} title="Plan" icon={FaCalendar} />
+      <SidebarNavItem sidebarWidth={sidebarWidth} title="Task" icon={FaTasks} />
+      <SidebarNavItem sidebarWidth={sidebarWidth} title="Projects" icon={FaFolder} />
+      <SidebarNavItem sidebarWidth={sidebarWidth} title="Tags" icon={FaTags} />
+      <SidebarNavItem sidebarWidth={sidebarWidth} title="Free Plan" icon={FaWallet} />
 
     </Flex>
 
