@@ -1,9 +1,14 @@
+// importing chakara components from chakra
 import { Flex, Link, Menu, MenuButton, Text, Icon } from "@chakra-ui/react";
 
+// state to manage options 
 import { useState } from "react";
+
+// react icons
 import { FaArrowDown, FaArrowUp, FaSquare } from "react-icons/fa";
 
 const SidebarNavItem = ({ sidebarWidth, title, icon }) => {
+
   // state to hide and display the text on clicking the navItems
   const [showOptions, setShowOptions] = useState(false);
 
@@ -36,7 +41,7 @@ const SidebarNavItem = ({ sidebarWidth, title, icon }) => {
                   <Text>{sidebarWidth && title}</Text>
                 </Flex>
                 
-                {/* to flip the arrow up and down on clicking */}
+                {/* to flip the arrow up and down on clicking when sidebar is open*/}
                 { sidebarWidth && 
                   <>
                       { showOptions ? <FaArrowUp fontSize='10px' /> : <FaArrowDown fontSize='10px' />}

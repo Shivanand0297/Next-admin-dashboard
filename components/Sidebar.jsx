@@ -1,13 +1,19 @@
+// importing chakara components from chakra
 import { Flex, Divider, Avatar, Heading, Text, IconButton, Button } from "@chakra-ui/react"
+
+// state to manage the sidebar open open or close state
 import { useState } from "react"
+
+// react icons
 import { FaBars, FaCalendar, FaFolder, FaTags, FaTasks, FaWallet } from "react-icons/fa"
+
+// SidebarNavItem
 import SidebarNavItem from "./SidebarNavItem"
 
 const Sidebar = () => {
 
   // state to change the sidebar width on click
-  const [sidebarWidth, setSidebarWidth] = useState(true) // by default sidebar is collapsed
-
+  const [sidebarWidth, setSidebarWidth] = useState(true) // by default sidebar is open
 
   return (
     // main flex container
