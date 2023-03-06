@@ -19,7 +19,7 @@ const SidebarNavItem = ({ sidebarWidth, title, icon }) => {
           p={2}
           borderRadius={8}
           _hover={{ textDecoration: "none", backgroundColor: "#f5f5eb" }}
-          w={sidebarWidth && "100%"}
+          w={sidebarWidth ? "100%" : "85%"}
           onClick={() => setShowOptions(!showOptions)}
         >
           <MenuButton w="100%">

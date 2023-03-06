@@ -1,3 +1,4 @@
+// chakra components
 import { Flex, Heading } from "@chakra-ui/react"
 
 const NavBar = () => {

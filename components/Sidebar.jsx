@@ -24,7 +24,7 @@ const Sidebar = () => {
       p={2}
       // boxShadow="4px 4px 12px 0 rgba(0, 0, 0, 0.05)"
       borderRight = "0.5px solid rgba(0, 0, 0, 0.08)"
-      w={sidebarWidth ? "210px" : "115px"}
+      w={sidebarWidth ? "210px" : "75px"}
       transition="all 0.05s ease-out"
       flexDir="column"
       justifyContent="space-between"
