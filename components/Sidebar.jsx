@@ -14,7 +14,7 @@ const Sidebar = () => {
     <Flex
       pos="sticky"
       left="0"
-      h="100vh"
+      minHeight="100vh"
       p={2}
       boxShadow="4px 4px 12px 0 rgba(0, 0, 0, 0.05)"
       w={sidebarWidth ? "210px" : "115px"}
@@ -33,22 +33,26 @@ const Sidebar = () => {
       as="nav"
       >
 
-      {/* logo */}
-      <Heading as="h1" size="md">
-        Flows list
-      </Heading>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+      >
+        {/* logo */}
+        <Heading as="h1" size="md" display={sidebarWidth ? "flex" : "none"} >
+          Flows list
+        </Heading>
 
-
-      {/* menu icon button */}
-      <IconButton
-        background="none"
-        mt={5}
-        p={2}
-        _hover={{background: "none"}}
-        icon={<FaBars fontSize='20px' />}
-        onClick={()=>setSidebarWidth(!sidebarWidth)}
-        justifyContent="flex-start"
-      />
+        {/* menu icon button */}
+        <IconButton
+          background="none"
+          p={2}
+          _hover={{background: "none"}}
+          icon={<FaBars fontSize='20px' />}
+          onClick={()=>setSidebarWidth(!sidebarWidth)}
+          justifyContent="flex-start"
+          />
+      </Flex>
 
       {/* add task button */}
       <Button
@@ -58,8 +62,6 @@ const Sidebar = () => {
       >
         {sidebarWidth ? "+ Add new task" : "+"}
       </Button>
-
-
 
       {/* navItems */}
       <NavItem sidebarWidth={sidebarWidth} title="Plan" icon={FaCalendar} />
